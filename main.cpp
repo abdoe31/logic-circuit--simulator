@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-    dynamicnode x ;
 
     
     dynamicnode d;
