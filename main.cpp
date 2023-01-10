@@ -17,12 +17,13 @@ int main()
  
             andgate x(d.find("a"));
             x.addinput(d.find("b"));
+            
     
                     
             
     
 
-    
+            return 0 ; 
     
 }
 
