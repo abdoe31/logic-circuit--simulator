@@ -19,11 +19,7 @@ int main()
             x.addinput(d.find("b"));
     
                     
-            x.setoutput(d.find("c"));
-          cout <<x.getoutput();
-    
-
-    
+            
     
 
     
