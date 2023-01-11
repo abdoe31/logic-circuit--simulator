@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Welcome_1
+PROJECTNAME=logic-gates-simulator
 
 # Active Configuration
 DEFAULTCONF=Debug
