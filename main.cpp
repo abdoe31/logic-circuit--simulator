@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "andgatee.h"
+#include "gatee.h"
 
 using namespace std;
 
@@ -20,12 +20,13 @@ int main()
         file1>>x;
         if (x=="and"){
             n++;
-           a[n] = new andgate();
+           a[n] = new notgate();
            file1>>x;
            while (!(x == "*")){
                
                nodes.add(x);
                a[n]->addinput(nodes.find(x));
+               
                
                            file1>>x;
   
@@ -35,9 +36,9 @@ int main()
                a[n]->setoutput(nodes.find(x));
             
         }
+        
         if (x=="set"){
-            
-            
+         
             
         }
         

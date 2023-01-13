@@ -43,10 +43,10 @@ Contributor(s):
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>andgatee.h</itemPath>
       <itemPath>dynamicnode.h</itemPath>
       <itemPath>gatee.h</itemPath>
       <itemPath>node.h</itemPath>
+      <itemPath>simulator.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -55,11 +55,11 @@ Contributor(s):
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>andgate.cpp</itemPath>
       <itemPath>dynamicnode.cpp</itemPath>
       <itemPath>gate.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>node.cpp</itemPath>
+      <itemPath>simulator.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -87,10 +87,6 @@ Contributor(s):
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="andgate.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="andgatee.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="dynamicnode.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dynamicnode.h" ex="false" tool="3" flavor2="0">
@@ -119,6 +115,10 @@ Contributor(s):
       <item path="node.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="node.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="simulator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="simulator.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -141,10 +141,6 @@ Contributor(s):
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="andgate.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="andgatee.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="dynamicnode.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dynamicnode.h" ex="false" tool="3" flavor2="0">
@@ -173,6 +169,10 @@ Contributor(s):
       <item path="node.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="node.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="simulator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="simulator.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

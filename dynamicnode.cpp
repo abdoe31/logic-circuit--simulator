@@ -18,6 +18,8 @@ dynamicnode::dynamicnode(string name) {
 
 }
  void dynamicnode :: add(string name) {
+     
+     
 
 
 	 if (lastnode == -1) {
@@ -53,9 +55,9 @@ dynamicnode::dynamicnode(string name) {
 	 bool x = false;
 
 	 if (lastnode ==-1){
+	                          return NULL;
+
 	 
-	 
-		 cout << "there is no element";
 	 }
 	 else {
 
@@ -72,6 +74,7 @@ dynamicnode::dynamicnode(string name) {
 		 }
 		 if (x==false) {
 			 cout << " node cannot found ";
+                         return NULL;
 		 }
 	 }
          
@@ -90,7 +93,7 @@ dynamicnode::dynamicnode(string name) {
 	 {
 		 for (int  i = 0; i < lastnode+1; i++)
 		 {
-			 cout << "node" <<point[i].getname()<< "is : "<<point[i].getvalue()<< endl;
+			 cout << "node" <<"  "<<point[i].getname()<< "is : "<<point[i].getvalue()<< endl;
 
 		 }
 

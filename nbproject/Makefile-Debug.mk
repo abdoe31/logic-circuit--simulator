@@ -35,11 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/andgate.o \
 	${OBJECTDIR}/dynamicnode.o \
 	${OBJECTDIR}/gate.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/node.o
+	${OBJECTDIR}/node.o \
+	${OBJECTDIR}/simulator.o
 
 # Test Directory
 TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
@@ -75,11 +75,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/logic-gates-simulator.exe: ${OBJECTFI
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/logic-gates-simulator ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/andgate.o: andgate.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/andgate.o andgate.cpp
-
 ${OBJECTDIR}/dynamicnode.o: dynamicnode.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -100,6 +95,11 @@ ${OBJECTDIR}/node.o: node.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/node.o node.cpp
 
+${OBJECTDIR}/simulator.o: simulator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/simulator.o simulator.cpp
+
 # Subprojects
 .build-subprojects:
 
@@ -111,19 +111,6 @@ ${TESTDIR}/TestFiles/f1: ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.cc} -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS}   
 
-
-${OBJECTDIR}/andgate_nomain.o: ${OBJECTDIR}/andgate.o andgate.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/andgate.o`; \
-	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
-	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/andgate_nomain.o andgate.cpp;\
-	else  \
-	    ${CP} ${OBJECTDIR}/andgate.o ${OBJECTDIR}/andgate_nomain.o;\
-	fi
 
 ${OBJECTDIR}/dynamicnode_nomain.o: ${OBJECTDIR}/dynamicnode.o dynamicnode.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -175,6 +162,19 @@ ${OBJECTDIR}/node_nomain.o: ${OBJECTDIR}/node.o node.cpp
 	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/node_nomain.o node.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/node.o ${OBJECTDIR}/node_nomain.o;\
+	fi
+
+${OBJECTDIR}/simulator_nomain.o: ${OBJECTDIR}/simulator.o simulator.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/simulator.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/simulator_nomain.o simulator.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/simulator.o ${OBJECTDIR}/simulator_nomain.o;\
 	fi
 
 # Run Test Targets
