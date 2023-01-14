@@ -1,3 +1,3 @@
-and A B * H
-and z x * l
+and A B c * H
+and z x H * l
 

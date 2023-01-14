@@ -20,20 +20,28 @@ int main()
         file1>>x;
         if (x=="and"){
             n++;
-           a[n] = new notgate();
+           a[n] = new andgate();
+           
+           
            file1>>x;
            while (!(x == "*")){
-               
-               nodes.add(x);
-               a[n]->addinput(nodes.find(x));
-               
-               
+               node* temp =nodes.find(x);
+               if (temp==NULL){
+                   
+                     nodes.add(x);
+
+                   
+               }
+               temp =nodes.find(x);
+               a[n]->addinput(temp);
+
                            file1>>x;
   
            }
            file1>>x;
               nodes.add(x);
                a[n]->setoutput(nodes.find(x));
+
             
         }
         
@@ -46,9 +54,8 @@ int main()
     
      
     
-                   nodes.printnodes();
 
-    
+            nodes.printnodes();
                     
 
             

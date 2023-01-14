@@ -11,11 +11,25 @@
  */
 
 #include "simulator.h"
+simulator::simulator(string in_path,string out_path) {
+    in.open(in_path,ios::in);
+    out.open(out_path,ios::out);
+    last_gate=-1;
+    
+}
 
-simulator::simulator() {
+void  simulator :: simulate(){
+    
+            
+    
 }
 
 
+
 simulator::~simulator() {
+    delete [] gates;
+    in.close();
+    out.close();
+    
 }
 

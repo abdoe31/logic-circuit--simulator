@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+
 #include <string>
 #include "gatee.h"
 
@@ -45,15 +47,15 @@ gate ::  gate(node* x ){
             
         }
         
-    void gate::print(){
+    void gate::print(fstream mfile){
+        
       
         for(int i =0 ; i<=lastel ;i++){
-            cout<<" node number "<<i+1<<"is  " <<input[i]->getvalue();
-          
-                      
+            mfile<<" node  "<<input[i]->getname()<<"   is  " <<input[i]->getvalue();
+             
           }
         
-         cout <<"output is :   "<<output->getvalue();
+         mfile <<"output node:    "<<output->getname()<<"is : " <<output->getvalue();
       }
       // and gate implementaion 
   

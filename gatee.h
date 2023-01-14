@@ -13,8 +13,7 @@ public :
     gate(node* x );
        virtual void  addinput( node*in );
       virtual bool  getoutput()=0;
-  
-      void print();
+      void print(fstream mfile);
      void setoutput(node *x );
          ~gate();
 

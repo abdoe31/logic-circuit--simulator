@@ -55,6 +55,7 @@ dynamicnode::dynamicnode(string name) {
 	 bool x = false;
 
 	 if (lastnode ==-1){
+
 	                          return NULL;
 
 	 
@@ -73,7 +74,6 @@ dynamicnode::dynamicnode(string name) {
 
 		 }
 		 if (x==false) {
-			 cout << " node cannot found ";
                          return NULL;
 		 }
 	 }
