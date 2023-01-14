@@ -20,6 +20,22 @@ simulator::simulator(string in_path,string out_path) {
 
 void  simulator :: simulate(){
     
+    while(!in.eof()){
+        in>>read;
+        if (is_gate(read)){
+            
+            add_gate(read);
+            
+            
+        }else if(read== "set"){
+            
+            
+        }
+       
+        
+        
+    }
+    
             
     
 }

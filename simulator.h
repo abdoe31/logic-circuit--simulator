@@ -16,10 +16,10 @@ private:
     fstream in ;
     fstream out ;
       void add_gate();
-  bool is_gate();
+  bool is_gate( string read);
 
       void simulate();
-  void out_node();
+  void out_node(string read);
   void ptint_all();
 
 
