@@ -24,7 +24,7 @@ void  simulator :: simulate(){
         in>>read;
         if (is_gate(read)){
             
-            add_gate(read);
+            add_gate();
             
             
         }else if(read== "set"){
@@ -43,9 +43,11 @@ void  simulator :: simulate(){
 
 
 simulator::~simulator() {
-    delete [] gates;
     in.close();
     out.close();
-    
+    for (int i=0;i<=last_gate ;i++){
+        
+        delete gates[i];
+    }
 }
 
