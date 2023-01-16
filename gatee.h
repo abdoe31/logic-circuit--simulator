@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+
 #include <string>
 #include "dynamicnode.h"
 
@@ -13,7 +15,7 @@ public :
     gate(node* x );
        virtual void  addinput( node*in );
       virtual bool  getoutput()=0;
-      void print(fstream mfile);
+      void print(iostream &mfile);
      void setoutput(node *x );
          ~gate();
 

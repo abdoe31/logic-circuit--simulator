@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "node.h"
 using namespace std;
 
@@ -31,4 +29,8 @@ string node::getname() {
 }
 bool node::getvalue() {
     return this->value;
+}
+void node::print(iostream &mfile) {
+    
+    mfile<<"node "<<name<<"  value : "<<value<<endl;
 }

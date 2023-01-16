@@ -25,8 +25,9 @@ gate ::  gate(node* x ){
         cout<<"there is no size ";
         
     }else  {
-        input[lastel+1]= in;
-        lastel++;
+                lastel++;
+
+        input[lastel]= in;
         
     }
 
@@ -47,15 +48,15 @@ gate ::  gate(node* x ){
             
         }
         
-    void gate::print(fstream mfile){
+    void gate::print(iostream &mfile){
         
       
         for(int i =0 ; i<=lastel ;i++){
-            mfile<<" node  "<<input[i]->getname()<<"   is  " <<input[i]->getvalue();
+            mfile<<" node  "<<input[i]->getname()<<"   is  " <<input[i]->getvalue()<<endl;
              
           }
         
-         mfile <<"output node:    "<<output->getname()<<"is : " <<output->getvalue();
+         mfile <<"output node: "<<output->getname()<<" is : " <<output->getvalue()<<endl;
       }
       // and gate implementaion 
   
@@ -159,13 +160,12 @@ bool  norgate ::getoutput(){
       input = new node*[1];
 
     output = NULL ; 
-    lastel = -1;
+    lastel = 0;
 
       }
     notgate ::notgate(node *x ){
         input = new node*[1];
-    input[0]= x;
-        lastel=0;
+    input[lastel]= x;
 
     
     }

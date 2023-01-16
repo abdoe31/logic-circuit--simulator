@@ -1,4 +1,4 @@
-
+#include <fstream>
 #include <iostream>
 #include <string>
 using namespace std;
@@ -18,6 +18,7 @@ public:
 
 	string getname();
 	bool getvalue();
+        void print(iostream &mfile);
 
 
 };

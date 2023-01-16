@@ -1,0 +1,13 @@
+node D  value : 1
+node Q  value : 1
+node L  value : 1
+ node  A   is  0
+ node  B   is  0
+output node: D is : 1
+ node  A   is  0
+ node  B   is  0
+output node: L is : 1
+ node  L   is  1
+ node  D   is  1
+ node  C   is  1
+output node: Q is : 1
