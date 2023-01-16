@@ -1,12 +1,11 @@
-and A B / H
-and z x  /l
-
-set A 0 
-set b 0 
-set z 0 
-set x 1 
-
-out h
-out l 
-
-out *
+nand A B  * D
+nor A B * L
+and L D C * Q
+set A 1
+set B 0
+set C 1
+sim 
+out D
+out Q
+out L
+out _
