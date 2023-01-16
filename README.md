@@ -6,7 +6,7 @@ nand
 or 
 nor 
 not 
-# file format 
+#data.txt  file format 
 1. add logic gates 
 "logic gate name"  input1 name  input2 name ,,etc  * output node name  
 
